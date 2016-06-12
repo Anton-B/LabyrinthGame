@@ -1,0 +1,14 @@
+D:\C#\LabyrinthGame\LabyrinthGame\bin\Release\LabyrinthGame.exe.config
+D:\C#\LabyrinthGame\LabyrinthGame\bin\Release\LabyrinthGame.exe
+D:\C#\LabyrinthGame\LabyrinthGame\bin\Release\LabyrinthGame.pdb
+D:\C#\LabyrinthGame\LabyrinthGame\obj\Release\MainWindow.g.cs
+D:\C#\LabyrinthGame\LabyrinthGame\obj\Release\App.g.cs
+D:\C#\LabyrinthGame\LabyrinthGame\obj\Release\LabyrinthGame_MarkupCompile.cache
+D:\C#\LabyrinthGame\LabyrinthGame\obj\Release\LabyrinthGame_MarkupCompile.lref
+D:\C#\LabyrinthGame\LabyrinthGame\obj\Release\MainWindow.baml
+D:\C#\LabyrinthGame\LabyrinthGame\obj\Release\LabyrinthGame.g.resources
+D:\C#\LabyrinthGame\LabyrinthGame\obj\Release\LabyrinthGame.Properties.Resources.resources
+D:\C#\LabyrinthGame\LabyrinthGame\obj\Release\LabyrinthGame.csproj.GenerateResource.Cache
+D:\C#\LabyrinthGame\LabyrinthGame\obj\Release\LabyrinthGame.exe
+D:\C#\LabyrinthGame\LabyrinthGame\obj\Release\LabyrinthGame.pdb
+D:\C#\LabyrinthGame\LabyrinthGame\obj\Release\LabyrinthGame.csprojResolveAssemblyReference.cache

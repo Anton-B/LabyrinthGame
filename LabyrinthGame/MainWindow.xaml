@@ -1,0 +1,71 @@
+﻿<Window x:Class="LabyrinthGame.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LabyrinthGame"
+        mc:Ignorable="d"
+        Title="Игра" Height="1000" Width="1600" WindowStartupLocation="CenterScreen" Closing="Window_Closing" Background="#FFDDDDDD" Activated="Window_Activated" Deactivated="Window_Deactivated" ResizeMode="CanMinimize">
+    <StackPanel x:Name="mainStackPanel" VerticalAlignment="Center" Margin="0" HorizontalAlignment="Center" Visibility="Visible">
+        <StackPanel x:Name="menuStackPanel" Orientation="Vertical" Visibility="Visible" MinWidth="800">
+            <DockPanel x:Name="playerNameDockPanel" Margin="0, 40" LastChildFill="True">
+                <TextBlock x:Name="enterNameTextBlock" Padding="4" Text="Введите ваше имя:" FontSize="21.333"/>
+                <TextBox x:Name="playerNameTextBox" Padding="4" Margin="10, 0, 0, 0" Text="Игрок" FontSize="21.333" FontWeight="Bold" MaxLength="30"/>
+            </DockPanel>
+            <Button x:Name="newGameButton" Height="60" Margin="0, 40" Content="Новая игра" FontSize="29.333" Click="newGameButton_Click"></Button>
+            <Button x:Name="resultsButton" Height="60" Margin="0, 20" Content="Таблица итогов" FontSize="29.333" Click="resultsButton_Click"></Button>
+        </StackPanel>
+        <StackPanel x:Name="resStackPanel" Orientation="Vertical" Visibility="Collapsed">
+            <DockPanel x:Name="resultsMenuDockPanel" LastChildFill="True">
+                <Button x:Name="backButton" DockPanel.Dock="Left" Content="В меню" FontSize="20" Width="200" Height="40" Click="backButton_Click"></Button>                
+                <Button x:Name="clearButton" DockPanel.Dock="Right" Content="Очистить таблицу" FontSize="20" Width="200" Height="40" Click="clearButton_Click"></Button>
+                <TextBlock x:Name="resultsInfoTextBlock" Text="Таблица итогов:" VerticalAlignment="Center" FontSize="22" TextAlignment="Center"></TextBlock>
+            </DockPanel>            
+            <ListView x:Name="resultsListView" Width="1000" Margin="0, 20" MaxHeight="800" ScrollViewer.HorizontalScrollBarVisibility="Disabled" FontSize="20"
+                      ScrollViewer.VerticalScrollBarVisibility="Visible">
+                <ListView.View>
+                    <GridView AllowsColumnReorder="False">
+                        <GridViewColumn Width="180" DisplayMemberBinding="{Binding PlayerName}">
+                            <GridViewColumn.Header>
+                                <GridViewColumnHeader>Имя игрока</GridViewColumnHeader>
+                            </GridViewColumn.Header>
+                        </GridViewColumn>
+                        <GridViewColumn Width="180" DisplayMemberBinding="{Binding CoinsCount}">
+                            <GridViewColumn.Header>
+                                <GridViewColumnHeader>Собрано монет</GridViewColumnHeader>
+                            </GridViewColumn.Header>
+                        </GridViewColumn>
+                        <GridViewColumn Width="180" DisplayMemberBinding="{Binding Time}">
+                            <GridViewColumn.Header>
+                                <GridViewColumnHeader>Время игры</GridViewColumnHeader>
+                            </GridViewColumn.Header>
+                        </GridViewColumn>
+                        <GridViewColumn Width="180" DisplayMemberBinding="{Binding Date}">
+                            <GridViewColumn.Header>
+                                <GridViewColumnHeader>Дата запуска</GridViewColumnHeader>
+                            </GridViewColumn.Header>
+                        </GridViewColumn>
+                        <GridViewColumn Width="220" DisplayMemberBinding="{Binding EndingReason}">
+                            <GridViewColumn.Header>
+                                <GridViewColumnHeader>Причина завершения</GridViewColumnHeader>
+                            </GridViewColumn.Header>
+                        </GridViewColumn>
+                    </GridView>                    
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+        <StackPanel x:Name="gameStackPanel" Visibility="Collapsed">
+            <DockPanel x:Name="gameMeunuDockPanel" LastChildFill="True">
+                <Button x:Name="toMenuButton" DockPanel.Dock="Left" Width="270" Height="40" FontSize="20" Content="Завершить и выйти в меню" Click="toMenuButton_Click" Focusable="False"></Button>
+                <Button x:Name="anewButton" DockPanel.Dock="Right" Width="270" Height="40" FontSize="20" Content="Начать заново" Click="anewButton_Click" Focusable="False"></Button>
+                <TextBlock x:Name="gameInfoTextBlock" VerticalAlignment="Center" TextAlignment="Center" FontSize="22" Text="Соберите как можно больше монет, не попадитесь зомби!"></TextBlock>
+            </DockPanel>
+            <DockPanel x:Name="statDockPanel" Margin="0, 40, 0, 0" LastChildFill="True" Width="{Binding ActualWidth, ElementName=gameCanvas, Mode=OneWay}">
+                <TextBlock x:Name="coinsCountTextBlock" DockPanel.Dock="Left" Width="270" Padding="4" FontSize="21.333" TextAlignment="Left" Text="Монет: 0"/>
+                <TextBlock x:Name="timeTextBlock" DockPanel.Dock="Right" Width="270" Padding="4" FontSize="21.333" TextAlignment="Right"/>
+                <TextBlock x:Name="playerNameTextBlock" Padding="4" FontSize="21.333" TextAlignment="Center"/>
+            </DockPanel>
+            <Canvas x:Name="gameCanvas" Focusable="True" Panel.ZIndex="0"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

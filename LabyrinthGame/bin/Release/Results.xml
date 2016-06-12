@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Games>
+    <Game>
+      <PlayerName>Игрок</PlayerName>
+      <CoinsCount>2</CoinsCount>
+      <Time>00:31</Time>
+      <Date>15.01.2016</Date>
+      <EndingReason>Гибель персонажа</EndingReason>
+    </Game>
+    <Game>
+      <PlayerName>Игрок</PlayerName>
+      <CoinsCount>0</CoinsCount>
+      <Time>00:05</Time>
+      <Date>15.01.2016</Date>
+      <EndingReason>Выход</EndingReason>
+    </Game>
+    <Game>
+      <PlayerName>Игрок</PlayerName>
+      <CoinsCount>0</CoinsCount>
+      <Time>00:04</Time>
+      <Date>15.01.2016</Date>
+      <EndingReason>Выход</EndingReason>
+    </Game>
+    <Game>
+      <PlayerName>Игрок</PlayerName>
+      <CoinsCount>3</CoinsCount>
+      <Time>00:36</Time>
+      <Date>15.01.2016</Date>
+      <EndingReason>Выход</EndingReason>
+    </Game>
+    <Game>
+      <PlayerName>Игрок</PlayerName>
+      <CoinsCount>2</CoinsCount>
+      <Time>00:31</Time>
+      <Date>15.01.2016</Date>
+      <EndingReason>Выход</EndingReason>
+    </Game>
+  </Games>
+</Results>
